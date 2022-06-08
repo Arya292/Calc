@@ -6,6 +6,10 @@
   padding: 50px;
   display: flex;
   justify-content: center;
+  background-color: plum;
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
 .calculator {
   background: black;
@@ -14,7 +18,7 @@
   height: 550px;
   padding: 20px;
   position: center;
-  width: 370px;
+  width: 365px;
 }
 .button {
   padding: 10px;
@@ -46,9 +50,9 @@
   border: thick solid gainsboro;
 }
 .ans{
-  font-size: 95px;
+  font-size: 65px;
   font-weight: 400;
   display: flex;
   justify-content: right;
-  transform: translate(-5%,-12%);
+  transform: translate(-5%,-0.1%);
 }

@@ -1,30 +1,36 @@
 import styles from "../styles/layout.module.css";
-import _app from "./_app";
-import fns from "./fns";
 
 const Button=() =>{
     let ops = "";
-    const operations=(n)=>{
 
+    const operations=(n)=>{
         ops=ops+n.target.innerHTML;
         console.log(ops);
-      document.getElementById("txt").innerHTML=ops;
-
+        document.getElementById("txt").innerHTML=ops;
     }
-
     const evaluate=()=>{
-        var y = eval(ops);
-        console.log(y);
-     document.getElementById("txt").innerHTML=y;
+        if (ops[0] =="√"){
+            square_root(ops[1]);
+        }
+        else {
+            var y = eval(ops);
+            var z = Math.round(y);
+            console.log(z);
+            document.getElementById("txt").innerHTML = z;
+        }
     }
     const clear=()=>{
         ops=""
         document.getElementById("txt").innerHTML=ops;
     }
+    const square_root=(n)=>{
+         var ans = Math.sqrt(n.target.innerHTML)
+        document.getElementById("txt").innerHTML=ans;
+    }
     return(
         <div >
         <div>
-            <button className={styles.button} onClick={(e)=>operations(e)}>7</button>
+            <button className={styles.button}onClick={(e)=>operations(e)}>7</button>
             <button className={styles.button}onClick={(e)=>operations(e)}>8</button>
             <button className={styles.button}onClick={(e)=>operations(e)}>9</button>
             <button className={styles.button}onClick={(e)=>operations(e)}>*</button>
@@ -52,12 +58,11 @@ const Button=() =>{
                 <button className={styles.button}onClick={(e)=>operations(e)} > . </button>
                 <button className={styles.button}onClick={(e)=>operations(e)}>000</button>
                 <button className={styles.button} onClick={clear}>AC</button>
-                <button className={styles.button}onClick={(e)=>operations(e)}> √ </button>
+                <button className={styles.button}onClick={(e)=>operations(e)}>√ </button>
 
             </div>
 
         </div>
     )
 }
-
 export default Button
