@@ -1,0 +1,54 @@
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  min-height: 50px;
+  border: 1px solid steelblue;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+.calculator {
+  background: black;
+  border-radius: 50px;
+  color: white;
+  height: 550px;
+  padding: 20px;
+  position: center;
+  width: 370px;
+}
+.button {
+  padding: 10px;
+  align-items: center;
+  background: #335;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  color: azure;
+  height: 70px;
+  justify-content: center;
+  transition: filter .3s;
+  width: 80px;
+}
+.button:hover{
+  opacity: 0.7;
+}
+.button:focus{
+  opacity: 3;
+  background-color: cornflowerblue;
+}
+.screen {
+  width: 325px;
+  height: 120px;
+  justify-content: center;
+  background-color: #252121;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  border: thick solid gainsboro;
+}
+.ans{
+  font-size: 95px;
+  font-weight: 400;
+  display: flex;
+  justify-content: right;
+  transform: translate(-5%,-12%);
+}
