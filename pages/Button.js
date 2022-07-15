@@ -14,7 +14,7 @@ const Button=() =>{
         }
         else {
             var y = eval(ops);
-            var z = Math.round(y);
+            var z = (y+"").slice(0,5);
             console.log(z);
             document.getElementById("txt").innerHTML = z;
         }
